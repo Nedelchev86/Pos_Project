@@ -970,3 +970,58 @@ main {
         display: none;
     }
 }
+
+@media (max-width: 500px) {
+    body {
+        max-height: 100%;
+
+        /* background: #212140; */
+    }
+    main {
+        grid-template-columns: 15% 85%;
+    }
+
+    .content {
+        grid-template-columns: 100%;
+        grid-template-rows: 45% 55%;
+        grid-template-areas:
+            "rightContent"
+            "leftContent";
+    }
+
+    .left-content {
+        grid-area: leftContent;
+    }
+
+    .right-content {
+        grid-area: rightContent;
+    }
+
+    .activities,
+    .weekly-schedule {
+        margin-top: 10px;
+    }
+
+    .right-content {
+        grid-template-rows: 5% 40% 50%;
+        margin: 15px 15px 0 15px;
+        padding: 10px 0 0;
+        gap: 15px;
+    }
+
+    .left-content {
+        grid-template-rows: 45% 55%;
+        padding: 10px 20px 10px;
+    }
+
+    .active-calories-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .friends-activity {
+        display: none;
+    }
+}
